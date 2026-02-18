@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <main>
+        <!--Header-->
+        <header>
+            <div class="header">
+              <h3>IT SUPPORT DESK</h3>
+              <p>Admin Dashboard</p>
+            </div>
+            <div class="logout-btn">
+                <button id="logout-btn" ><a href="index.html">Log Out</a></button>
+            </div>
+        </header>
+        <!--aside-->
+        <aside>
+            <div class="sidebar">
+                <div class="small-cards">
+                    <h5>Open Tickets</h5>
+                    <span id="open-ticket">0</span>
+                </div>
+                <div class="small-cards">
+                    <h5>In Progress</h5>
+                    <span id="in-progress">0</span>
+                </div>
+                <div class="small-cards">
+                    <h5>Resolved</h5>
+                    <span id="resolved">0</span>
+                </div>
+            </div>
+        </aside>
+        <!--Section-->
+        <article>
+            <div class="search-field">
+                <label for="statusFilter">Status:</label>
+                <select id="statusFilter" onchange="filterByStatus()">
+                    <option value="All">All</option>
+                    <option value="Open Ticket">Open Tickets</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Resolved">Resolved</option>
+                </select>
+            </div>
+            <div class="table" id="table">
+                <table>
+                    <thead>
+                        <tr>
+                            <td >Ticket ID</td>
+                            <td >User Name</td>
+                            <td >User ID</td>
+                            <td >Issue Type</td>
+                            <td >Priority</td>
+                            <td >Description</td>
+                            <td >Status</td>
+                            <td >Action</td>
+                            <td >Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </article>
+    </main>
+</body>
+<script src="dashboard.js"></script>
+</html>

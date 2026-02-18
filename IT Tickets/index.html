@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+   <main>
+    <!--Header-->
+    <header>
+      <div class="header">
+        <h3>IT SUPPORT DESK</h3>
+        <p>Report Your IT Issue</p>
+      </div>
+    </header>
+    <!--Article-->
+     <article>
+      <form id="form">
+        <label for="username">Username or Email</label>
+        <br />
+        <input type="email" id="username" class="input-field" required/>
+        <br /><br />
+
+        <label for="userID">User ID</label>
+        <br />
+        <input type="text" id="userID" class="input-field" required/>
+        <br /><br />
+
+        <label for="issue-type">Issue Type:</label><br>
+        <select id="issue" class="input-field" required>
+        <option value="">Options</option>
+        <option value="Network">Network</option>
+        <option value="Software">Software</option>
+        <option value="Hardware">Hardware</option>
+         <option value="Other">other</option>
+        </select><br><br>
+
+        <label for="issue-description">Issue Description:</label><br>
+        <textarea class="input-field" id="description" required></textarea><br><br>
+
+        <label for="Priority">Priority:</label><br>
+        <select id="priority" class="input-field" required>
+        <option value="">Priority</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        </select><br><br>
+
+        <button class="btn" id="btn2" type="submit">Submit Ticket</button>
+      </form>
+     </article>
+   </main>
+   <script src="login.js"></script>
+  </body>
+</html>
+
